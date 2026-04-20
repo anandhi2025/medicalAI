@@ -128,7 +128,7 @@ function App() {
         body: JSON.stringify(body),
         signal: controller.signal
       });
-
+console.log("Backend URL:", import.meta.env.VITE_API_URL);
       clearTimeout(timeoutId);
 
       let data;
