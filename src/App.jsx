@@ -42,9 +42,9 @@ function App() {
     return () => document.removeEventListener('keydown', handleKeyPress);
   }, [isChatOpen]);
 
-  const backendUrl = useMemo(() => {
-    return import.meta.env.VITE_BACKEND_URL || '';
-  }, []);
+ const backendUrl = useMemo(() => {
+  return import.meta.env.VITE_API_URL || '';
+}, []);
 
   const examples = [
     { text: 'Latest treatment for lung cancer', disease: 'lung cancer', query: 'latest treatment' },
