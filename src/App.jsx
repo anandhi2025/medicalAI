@@ -6,7 +6,7 @@ const storedSessionId = localStorage.getItem('medicalSessionId');
 function makeSessionId() {
   return `session-${Math.random().toString(36).slice(2)}-${Date.now()}`;
 }
-
+const backendUrl = "https://backend-pj68.onrender.com";
 function App() {
   const [sessionId, setSessionId] = useState(storedSessionId || makeSessionId());
   const [disease, setDisease] = useState('');
